@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+
+ int main()
+ {
+   int n,size,r,c,i;
+   float rem;
+   clrscr();
+
+   printf("enter the size of matrex");
+   scanf("%d",&n);
+
+       size=n*n;
+       i=r=1;
+       c=(n+1)/2;
+
+       gotoxy(c*5,r*5);
+       printf("%d",i);
+
+       for(i=2;i<=size;i++)
+	{
+	  rem = (i-1)%n;
+	  if(rem == 0)
+
+	  {
+	  r=r+1;
+	  c=c;
+	  if(r>n)
+	  {
+	  r=1;
+	  }
+	  }
+	else
+	{
+	 r=r-1;
+	 c=c-1;
+	 if(r==0)
+	 {
+	 r=n;
+	 }
+
+	 if(c==0)
+	 {
+	   c=n;
+	 }
+	}
+	 gotoxy(c*5,r*5);
+	 printf("%d",i);
+
+	}
+
+   getch();
+   return 0;
+  }s
